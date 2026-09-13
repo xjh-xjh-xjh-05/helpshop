@@ -1,0 +1,70 @@
+{
+  "agentCards": [
+    {
+      "agentId": "helpshop-shopping-agent",
+      "name": "HelpShop银发购物助手",
+      "description": "面向老人的语音购物助手，支持商品搜索、多平台比价、下单确认、支付全流程，并支持子女协助购物和管理后台管理",
+      "version": "1.0.0",
+      "category": "shopping",
+      "iconUrl": "https://placehold.co/512x512/CC3333/FFFFFF.png?text=HelpShop",
+      "defaultInputModes": ["text/plain"],
+      "defaultOutputModes": ["text/plain", "application/json"],
+      "capabilities": {
+        "streaming": false,
+        "pushNotifications": false,
+        "stateTransitionHistory": false
+      },
+      "skills": [
+        {
+          "id": "shopping-compare",
+          "name": "商品比价推荐",
+          "description": "根据用户输入的商品需求，搜索多平台商品并进行智能比价推荐",
+          "tags": ["购物", "比价", "推荐"],
+          "examples": ["我想买一双不累脚的鞋", "帮我看看家用血压计"]
+        },
+        {
+          "id": "product-search",
+          "name": "商品搜索",
+          "description": "在商品库中搜索符合关键词的商品列表",
+          "tags": ["搜索", "商品"],
+          "examples": ["搜一下老年手机"]
+        },
+        {
+          "id": "order-confirm",
+          "name": "下单确认",
+          "description": "确认用户选中的商品、数量和收货地址，生成订单",
+          "tags": ["下单", "确认"],
+          "examples": ["买第一个", "就这个"]
+        },
+        {
+          "id": "payment",
+          "name": "支付",
+          "description": "提供多种支付方式并完成模拟支付",
+          "tags": ["支付", "付款"],
+          "examples": ["华为支付", "付款"]
+        },
+        {
+          "id": "voice-command",
+          "name": "语音指令",
+          "description": "处理语音输入的购物指令",
+          "tags": ["语音", "说话"],
+          "examples": ["买第一个两双"]
+        },
+        {
+          "id": "admin-dashboard",
+          "name": "管理员查询",
+          "description": "查询平台用户统计和订单总数",
+          "tags": ["管理", "统计"],
+          "examples": ["查看所有用户"]
+        },
+        {
+          "id": "customer-service",
+          "name": "客服工单",
+          "description": "查询和处理购物咨询工单",
+          "tags": ["客服", "工单"],
+          "examples": ["查看待处理工单"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Login",
+    "pages/Register",
+    "pages/IdentityAuth",
+    "pages/BindFamily",
+    "pages/UserHome",
+    "pages/AgentAssistant",
+    "pages/UserCategory",
+    "pages/UserProfile",
+    "pages/ChildHome",
+    "pages/ChildProfile",
+    "pages/ProductDetail",
+    "pages/CompareResult",
+    "pages/PaymentConfirm",
+    "pages/AddressManage",
+    "pages/OrderHistory",
+    "pages/ReminderList",
+    "pages/Welcome",
+    "pages/AdminHome",
+    "pages/AdminUserManage",
+    "pages/AdminOrderMonitor",
+    "pages/CustomerServiceHome",
+    "pages/CSTicketManage",
+    "pages/CSOrderList",
+    "pages/AdminProfile",
+    "pages/CSProfile"
+  ]
+}

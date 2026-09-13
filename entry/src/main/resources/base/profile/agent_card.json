@@ -1,0 +1,119 @@
+{
+  "name": "HelpShopAgent",
+  "version": "1.0.0",
+  "description": "HelpShop银发购物助手 — 帮助老人通过语音完成商品搜索、比价推荐、下单支付全流程",
+  "type": "ondevice",
+  "model": "rule-based",
+  "language": "zh-CN",
+  "roles": [
+    "elderly",
+    "child",
+    "admin",
+    "customer_service"
+  ],
+  "intents": [
+    {
+      "type": "compare",
+      "description": "商品比价推荐",
+      "triggers": ["买", "购", "想买", "要", "帮我买", "想买", "给我", "来一个"],
+      "output": "多平台比价结果，包含推荐商品和候选列表"
+    },
+    {
+      "type": "search",
+      "description": "商品搜索",
+      "triggers": ["搜", "找", "有什么", "推荐", "哪些", "查看"],
+      "output": "符合关键词的商品列表"
+    },
+    {
+      "type": "order_confirm",
+      "description": "下单确认",
+      "triggers": ["下单", "确认", "就这个", "买这个", "要这个"],
+      "output": "订单预览，包含商品、数量、地址、总价"
+    },
+    {
+      "type": "pay",
+      "description": "支付",
+      "triggers": ["付款", "支付", "结账", "买单", "付钱"],
+      "output": "支付方式选择和支付确认"
+    },
+    {
+      "type": "voice_command",
+      "description": "语音指令",
+      "triggers": ["帮", "要", "选", "第一", "第二", "第三"],
+      "output": "执行语音选择的商品操作"
+    },
+    {
+      "type": "admin_query",
+      "description": "管理员查询",
+      "triggers": ["所有用户", "用户列表", "平台统计", "审计日志", "系统数据"],
+      "output": "平台统计数据"
+    },
+    {
+      "type": "cs_ask",
+      "description": "客服咨询",
+      "triggers": ["工单", "退款", "投诉", "物流", "支付失败", "咨询"],
+      "output": "工单状态和订单问题信息"
+    }
+  ],
+  "skills": [
+    {
+      "name": "shopping_compare",
+      "description": "多平台商品比价",
+      "handler": "ShoppingCompareSkill"
+    },
+    {
+      "name": "product_search",
+      "description": "商品搜索",
+      "handler": "ProductSearchSkill"
+    },
+    {
+      "name": "order_confirm",
+      "description": "下单确认",
+      "handler": "OrderConfirmSkill"
+    },
+    {
+      "name": "payment",
+      "description": "支付准备",
+      "handler": "PaymentSkill"
+    },
+    {
+      "name": "voice_input",
+      "description": "语音输入处理",
+      "handler": "VoiceInputSkill"
+    },
+    {
+      "name": "admin_dashboard",
+      "description": "管理员数据查询",
+      "handler": "AdminDashboardSkill"
+    },
+    {
+      "name": "customer_service",
+      "description": "客服工单查询",
+      "handler": "CustomerServiceSkill"
+    }
+  ],
+  "capabilities": {
+    "voice_input": true,
+    "tts_output": true,
+    "multi_turn": true,
+    "offline_fallback": true
+  },
+  "supported_roles": [
+    {
+      "role": "elderly",
+      "flow": "语音输入需求 → 比价推荐 → 语音选商品 → 自动填地址 → 支付确认 → 子女同步通知"
+    },
+    {
+      "role": "child",
+      "flow": "绑定老人 → 管理地址 → 帮助购物 → 查看提醒 → 接收支付通知"
+    },
+    {
+      "role": "admin",
+      "flow": "查看平台数据 → 用户管理 → 订单监控 → 审计日志"
+    },
+    {
+      "role": "customer_service",
+      "flow": "查看工单 → 处理咨询 → 帮助购物 → 订单查询"
+    }
+  ]
+}

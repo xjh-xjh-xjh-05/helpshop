@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "银发智购"
+    },
+    {
+      "name": "reason_microphone",
+      "value": "语音识别需要使用麦克风"
+    },
+    {
+      "name": "reason_distributed_datasync",
+      "value": "跨设备同步购物提醒和订单数据"
+    }
+  ]
+}

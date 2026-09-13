@@ -1,0 +1,56 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "C:/Users/xu/Desktop/music/helpshop.p12",
+          "storePassword": "0000001BA272D54049A9489549938DA7A241EA83C28DDD09BAACE046A2022195E6E125D5902534EC6A4F9A",
+          "keyAlias": "helpshop",
+          "keyPassword": "0000001B0547A6519B5295E81D39AF3F1720310D93C6FE6C5B597BB626FF1131A954420941BE3BC69122B6",
+          "signAlg": "SHA256withECDSA",
+          "profile": "C:/Users/xu/Desktop/music/helpshopDebug (1).p7b",
+          "certpath": "C:/Users/xu/Desktop/music/helpshop (1).cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.1.1(24)",
+        "compatibleSdkVersion": "6.1.0(23)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
